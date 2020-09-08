@@ -1,7 +1,9 @@
 import java.util.*;
 import greenfoot.*;
 import java.util.ArrayList;
- // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.io.*;
+// (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.lang.reflect.Constructor;
 
 /**
  * Write a description of class Classroom here.
@@ -34,6 +36,25 @@ public class Classroom extends World
         // Add three lines to this doc with your class constructor and your row and seat number
         // Make sure to match your first and last name to the class file you created.
         
+        // File file = new File("period2.txt");
+        // try{
+        // BufferedReader br = new BufferedReader(new FileReader(file));
+        // String st;
+        // int i = 1;
+        // int j = 1;
+        // while ((st = br.readLine()) != null){
+        //     String[] params = st.split("[,]", 0);
+        //     Class<?> clazz = Class.forName(params[0]);
+        //     Constructor<?> ctor = clazz.getConstructor(String.class, String.class, int.class, int.class);
+        //     Student object = (Student) ctor.newInstance(new Object[] {params[1], params[2], i++, j++ });
+        //     addObject(object, i++, j++);
+        // }}
+        // catch (Exception e){
+        //     System.out.println("File not found");
+        // }
+
+        
+
         JoshuaChon joshuachon = new JoshuaChon("Joshua", "Chon", 1, 6);
         addObject(joshuachon, 1, 6);
         joshuachon.sitDown();
@@ -132,6 +153,22 @@ public class Classroom extends World
         nirusuravarjjala.sitDown();
         
 
-    }  
+    }
+}
 
+class ObjectMaker {
+    // Constructor, fields, initialization, etc...
+    public static Object makeObject(String classname) {
+        Object o = null;
+
+        try {
+            o = Class.forName(classname).newInstance();
+        } catch (Exception e) {
+            // There may be other exceptions to throw here,
+            // but I'm writing this from memory.
+            e.printStackTrace();
+        }
+
+        return o;
+    }
 }

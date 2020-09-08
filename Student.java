@@ -16,13 +16,15 @@ public abstract class Student extends Actor
    public boolean isActive;  // can you think of an algorithm that would allow you to use this
                              // variable to use keyboard entry for all the instance of a student
                              // that we will create?
-   public boolean sitting;   // Is the student sitting or standing (default sitting)                         
+   public boolean sitting;   // Is the student sitting or standing (default sitting)                
    
  //  public String imgFile;   // These will be created in subclass as firstName.toLowerCase()+
    public String portraitFile; // image used when sitting
    public String standingFile; // image used when standing
-   public String soundFile; //      firstName.toLowerCase()+lastName.toLowerCase()+".ext"; (.wav or .jpg)
+   public String soundFile; //      firstName.toLowerCase()+lastName.toLowerCase()+".ext"; (.wav or .jpg)\
    Classroom clas = (Classroom) getWorld();
+
+   protected int period;
    public void setRow(int r){
        myRow=r;
     }
