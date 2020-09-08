@@ -156,19 +156,3 @@ public class Classroom extends World
     }
 }
 
-class ObjectMaker {
-    // Constructor, fields, initialization, etc...
-    public static Object makeObject(String classname) {
-        Object o = null;
-
-        try {
-            o = Class.forName(classname).newInstance();
-        } catch (Exception e) {
-            // There may be other exceptions to throw here,
-            // but I'm writing this from memory.
-            e.printStackTrace();
-        }
-
-        return o;
-    }
-}
