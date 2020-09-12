@@ -72,7 +72,7 @@ public class Classroom extends World
         kaifjeelani.sitDown();
 
          
-        EricZheng ericzheng = new EricZheng("Eric", "Zheng", 6, 1);
+       /* EricZheng ericzheng = new EricZheng("Eric", "Zheng", 6, 1);
         addObject(ericzheng, 6, 1);
         ericzheng.sitDown();
 
@@ -150,7 +150,7 @@ public class Classroom extends World
         
         NiruSuravarjjala nirusuravarjjala = new NiruSuravarjjala("Niru", "Suravarjjala", 1, 5);
         addObject(nirusuravarjjala, 1, 5);
-        nirusuravarjjala.sitDown();
+        nirusuravarjjala.sitDown(); */
         
 
     }
