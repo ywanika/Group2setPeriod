@@ -12,6 +12,7 @@ public class DerekXu extends Student implements SpecialInterest, CSALearnedSoFar
 {
     private static int run = 1;
     private static String q;
+    private static int period = 2;
     /**
      * Constructor for the DerekXu class.
      * Constructors are special methods with the same exact name as the class name.  
@@ -34,6 +35,10 @@ public class DerekXu extends Student implements SpecialInterest, CSALearnedSoFar
         soundFile=f.toLowerCase()+l.toLowerCase()+".wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
         setImage(portraitFile);
         sitting=true;
+    }
+    
+    public int GetPeriod(){
+        return period;
     }
     
      /**

@@ -13,6 +13,7 @@ import java.net.URI;
 public class KaifJeelani extends Student implements SpecialInterestOrHobby
 {
     private String battlemusicfile = "BattleJeelaniKaif.mp3";
+    private static int period = 3;
     /**
      * @param String f (firstname)
      * @param String l (lastname)
@@ -31,6 +32,11 @@ public class KaifJeelani extends Student implements SpecialInterestOrHobby
         setImage(portraitFile);
         sitting=true;
     }
+    
+    public int GetPeriod(){
+        return period;
+    }
+    
     /**
      * Default constructor, if you don't pass in a name and seating location
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left

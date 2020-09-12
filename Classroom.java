@@ -13,7 +13,9 @@ import java.lang.reflect.Constructor;
  */
 public class Classroom extends World
 {
-    private ArrayList<Object> listo = new ArrayList<Object>();
+    private ArrayList<Class> listo = new ArrayList<Class>();
+    private List student2 = new ArrayList();
+    private List student3 = new ArrayList();
     /**
      * Constructor for objects of class Classroom.
      *
@@ -53,6 +55,12 @@ public class Classroom extends World
         //     System.out.println("File not found");
         // }
 
+        int currentPeriod = 2;
+        
+        if (currentPeriod == 2){
+            //setBackground(RED);
+            
+        }
         
 
         JoshuaChon joshuachon = new JoshuaChon("Joshua", "Chon", 1, 6);
@@ -63,9 +71,9 @@ public class Classroom extends World
         addObject(derekxu, 2, 4);
         derekxu.sitDown();
         
-        NibodhVallapureddy nibodhvallapureddy = new NibodhVallapureddy("Nibodh", "Vallapureddy", 1, 1);
-        addObject(nibodhvallapureddy, 1, 1);
-        nibodhvallapureddy.sitDown();
+        JoeyHuang joeyhuang = new JoeyHuang("Joey", "Huang", 2, 1);
+        addObject(joeyhuang, 2, 1);
+        joeyhuang.sitDown(); 
 
         KaifJeelani kaifjeelani = new KaifJeelani("Kaif", "Jeelani", 5,2);
         addObject(kaifjeelani, 5, 2);
