@@ -24,7 +24,7 @@ public class Classroom extends World
         super(10, 6, 130);
         ToggleBtn balloon = new ToggleBtn();
         addObject(balloon, 1, 1);
-        prepare(0);
+        prepare(1);
     }
 
     /**
@@ -60,9 +60,13 @@ public class Classroom extends World
        addObject(balloon, 1, 1);
         
        if (currentPeriod == 0){ //period2
-           JoeyHuang joeyhuang = new JoeyHuang("Joey", "Huang", 2, 1);
-           addObject(joeyhuang, 2, 1);
-           joeyhuang.sitDown(); 
+           TrishaMoorkoth trishamoorkoth = new TrishaMoorkoth("Trisha", "Moorkoth", 6, 2);
+           addObject(trishamoorkoth, 6, 2);
+           trishamoorkoth.sitDown();
+           
+           NiruSuravarjjala nirusuravarjjala = new NiruSuravarjjala("Niru", "Suravarjjala", 1, 5);
+           addObject(nirusuravarjjala, 1, 5);
+           nirusuravarjjala.sitDown();
            
            DerekXu derekxu = new DerekXu("Derek", "Xu", 2, 4);
            addObject(derekxu, 2, 4);
@@ -70,13 +74,17 @@ public class Classroom extends World
        }
        
 
-       if (currentPeriod == 1) {  //period3
+       else if (currentPeriod == 1) {  //period3
            JoshuaChon joshuachon = new JoshuaChon("Joshua", "Chon", 1, 6);
            addObject(joshuachon, 1, 6);
            joshuachon.sitDown();
            
            KaifJeelani kaifjeelani = new KaifJeelani("Kaif", "Jeelani", 5,2);
            addObject(kaifjeelani, 5, 2);
+           kaifjeelani.sitDown();
+           
+           JennyWang jennywang = new JennyWang("Jenny", "Wang", 5,2);
+           addObject(jennywang, 5, 2);
            kaifjeelani.sitDown();
        }
         

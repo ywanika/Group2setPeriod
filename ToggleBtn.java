@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ToggleBtn extends Actor
 {
-    private int currentPeriod = 0;
+    private static int currentPeriod = 1;
     /**
      * Act - do whatever the ToggleBtn wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
