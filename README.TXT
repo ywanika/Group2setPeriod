@@ -71,5 +71,5 @@ INSTRUCTIONS:
 
 3. Make sure you are not in the same seat as another student in your period.
  
-4. Use the Toggle Button (red balloon) to change the period from period 2 to period 3 
+4. Use the Toggle Button (red balloon) to change the period from period 2 to period 3. 
 
