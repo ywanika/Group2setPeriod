@@ -9,7 +9,7 @@ HOW TO START THIS PROJECT:  To start this project, assuming that you have Greenf
 
 AUTHORS:                    Mr. Kaehms and CSA students
 
-CONTRIBUTERS:               Kilgore Trout
+CONTRIBUTORS:               Kilgore Trout
                             Tinhphong Nguyen
                             Tanish Baranwal
                             Trisha Moorkoth
@@ -24,8 +24,8 @@ CONTRIBUTERS:               Kilgore Trout
                             Yash Bansal
                             Julia Zhao
                             Anish Shivamurthy
-			    Eshan Bathula
-			    Stacy Glushchenko
+			      Eshan Bathula
+			      Stacy Glushchenko
                             (Add you name here once your code 
                              is added and correct)
 
@@ -62,4 +62,14 @@ git status
 git commit -m “adding my files to the repository”
 
 8) Push your changes to the remote repository:
+
+INSTRUCTIONS:
+
+If you are in period 2, add your constructor to the setPeriod2 method in the setPeriod method in class. 
+
+If you are in period 3, add your constructor to the setPeriod3 method in the setPeriod method in class. 
+
+Make sure you are not in the same seat as another student in your period.
+ 
+Use the Toggle Button (red balloon) to change the period from period 2 to period 3 
 
