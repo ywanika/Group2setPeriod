@@ -13,7 +13,6 @@ import java.net.URI;
 public class KaifJeelani extends Student implements SpecialInterestOrHobby
 {
     private String battlemusicfile = "BattleJeelaniKaif.mp3";
-    private static int period = 3;
     /**
      * @param String f (firstname)
      * @param String l (lastname)
@@ -31,10 +30,6 @@ public class KaifJeelani extends Student implements SpecialInterestOrHobby
         soundFile=f.toLowerCase()+l.toLowerCase()+".mp3";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
         setImage(portraitFile);
         sitting=true;
-    }
-    
-    public int GetPeriod(){
-        return period;
     }
     
     /**

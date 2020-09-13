@@ -13,7 +13,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class JoshuaChon extends Student implements SpecialInterestOrHobby
 {
-    private static int period = 3;
     /**
      * Constructor for the KilgoreTrout class.
      * Constructors are special methods with the same exact name as the class name.  
@@ -36,10 +35,6 @@ public class JoshuaChon extends Student implements SpecialInterestOrHobby
         soundFile=f.toLowerCase()+l.toLowerCase()+".wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
         setImage(portraitFile);
         sitting=true;
-    }
-    
-    public int GetPeriod(){
-        return period;
     }
     
     /**

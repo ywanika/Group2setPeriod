@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ToggleBtn extends Actor
 {
-    private static int currentPeriod = 1;
+    private static int currentPeriod = 0; // initial default period is period 2
     /**
      * Act - do whatever the ToggleBtn wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -16,8 +16,8 @@ public class ToggleBtn extends Actor
     public void act() 
     {
         if(Greenfoot.mouseClicked(this)){ 
-            currentPeriod = 1 - currentPeriod;
-            ((Classroom)getWorld()).prepare(currentPeriod);
+            currentPeriod = 1 - currentPeriod; 
+            ((Classroom)getWorld()).setPeriod(currentPeriod);
         }
     }    
 }

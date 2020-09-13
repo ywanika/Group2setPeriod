@@ -15,7 +15,7 @@ public class Classroom extends World
 {
     private ArrayList<Class> listo = new ArrayList<Class>();
     /**
-     * Constructor for objects of class Classroom.
+     * Constructor for objects of class Classroom. Creates the toggle button and sets initial period to period 2
      *
      */
     public Classroom()
@@ -24,42 +24,21 @@ public class Classroom extends World
         super(10, 6, 130);
         ToggleBtn balloon = new ToggleBtn();
         addObject(balloon, 1, 1);
-        prepare(1);
+        setPeriod(0);
     }
 
     /**
-     * Prepare the world for the start of the program. That is: create the initial
-     * objects and add them to the world.
+     * Clears world and creates objects depending on the current period
      */
 
-     public void prepare(int currentPeriod)
+     public void setPeriod(int currentPeriod)
     {
-        // Add three lines to this doc with your class constructor and your row and seat number
-        // Make sure to match your first and last name to the class file you created.
-        
-        // File file = new File("period2.txt");
-        // try{
-        // BufferedReader br = new BufferedReader(new FileReader(file));
-        // String st;
-        // int i = 1;
-        // int j = 1;
-        // while ((st = br.readLine()) != null){
-        //     String[] params = st.split("[,]", 0);
-        //     Class<?> clazz = Class.forName(params[0]);
-        //     Constructor<?> ctor = clazz.getConstructor(String.class, String.class, int.class, int.class);
-        //     Student object = (Student) ctor.newInstance(new Object[] {params[1], params[2], i++, j++ });
-        //     addObject(object, i++, j++);
-        // }}
-        // catch (Exception e){
-        //     System.out.println("File not found");
-        // }
-
        removeObjects(getObjects(null));
        
        ToggleBtn balloon = new ToggleBtn();
        addObject(balloon, 1, 1);
         
-       if (currentPeriod == 0){ //period2
+       if (currentPeriod == 0){ //if the current priod, then create these students
            TrishaMoorkoth trishamoorkoth = new TrishaMoorkoth("Trisha", "Moorkoth", 6, 2);
            addObject(trishamoorkoth, 6, 2);
            trishamoorkoth.sitDown();
@@ -86,107 +65,7 @@ public class Classroom extends World
            JennyWang jennywang = new JennyWang("Jenny", "Wang", 5,2);
            addObject(jennywang, 5, 2);
            kaifjeelani.sitDown();
-       }
-        
-
-        /*JoshuaChon joshuachon = new JoshuaChon("Joshua", "Chon", 1, 6);
-        addObject(joshuachon, 1, 6);
-        joshuachon.sitDown();
-
-        DerekXu derekxu = new DerekXu("Derek", "Xu", 2, 4);
-        addObject(derekxu, 2, 4);
-        derekxu.sitDown();
-        
-        JoeyHuang joeyhuang = new JoeyHuang("Joey", "Huang", 2, 1);
-        addObject(joeyhuang, 2, 1);
-        joeyhuang.sitDown(); 
-
-        KaifJeelani kaifjeelani = new KaifJeelani("Kaif", "Jeelani", 5,2);
-        addObject(kaifjeelani, 5, 2);
-        kaifjeelani.sitDown();
-
-         
-        EricZheng ericzheng = new EricZheng("Eric", "Zheng", 6, 1);
-        addObject(ericzheng, 6, 1);
-        ericzheng.sitDown();
-
-        ArvindKumar arvindkumar = new ArvindKumar("Arvind", "Kumar", 3, 3);
-        addObject(arvindkumar, 3, 3);
-        arvindkumar.sitDown();
-         
-        RidhiTamirasa rtk = new RidhiTamirasa("Ridhi", "Tamirasa", 2, 3);
-        addObject(rtk, 2, 3);
-        rtk.sitDown();
-
-        AkashDarbha akashdarbha = new AkashDarbha("Akash", "Darbha", 3, 4);
-        addObject(akashdarbha, 3, 4);
-        akashdarbha.sitDown();  
-
-        SharvinM SharvinManjrekar = new SharvinM("Sharvin", "Manjrekar", 4, 4);
-        addObject(SharvinManjrekar, 4, 4);
-        SharvinManjrekar.sitDown();
-  
-        KeenanKalra keenankalra = new KeenanKalra("Keenan", "Kalra", 2, 2);
-        addObject(keenankalra, 2, 2);
-        keenankalra.sitDown();
-
-        AnirudhNagasamudra anirudhnagasamudra = new AnirudhNagasamudra("Anirudh", "Nagasamudra", 5, 4);
-        addObject(anirudhnagasamudra, 5, 4);
-        anirudhnagasamudra.sitDown();
-        
-        TinhphongN tinhphongnguyen = new TinhphongN("Tinhphong", "Nguyen", 1, 2);
-        addObject(tinhphongnguyen, 1, 2);
-        tinhphongnguyen.sitDown();
-       
-        ChelseaLee chelsealee = new ChelseaLee("Chelsea", "Lee", 4, 2);
-        addObject(chelsealee, 4, 2);
-        chelsealee.sitDown();
-        
-        TanishB tanishbaranwal = new TanishB("Tanish", "Baranwal", 4, 1);
-        addObject(tanishbaranwal, 4, 1);
-        tanishbaranwal.sitDown();  
-        
-        JoeyHuang joeyhuang = new JoeyHuang("Joey", "Huang", 2, 1);
-        addObject(joeyhuang, 2, 1);
-        joeyhuang.sitDown(); 
-        
-        YashBansal yashbansal = new YashBansal("Yash", "Bansal", 3, 1);
-        addObject(yashbansal, 3, 1);
-        yashbansal.sitDown();
-        
-        TrishaMoorkoth trishamoorkoth = new TrishaMoorkoth("Trisha", "Moorkoth", 6, 2);
-        addObject(trishamoorkoth, 6, 2);
-        trishamoorkoth.sitDown();
-
-        ShahilPatel shahilpatel = new ShahilPatel("Shahil", "Patel", 2, 4);
-        addObject(shahilpatel, 2, 4);
-        shahilpatel.sitDown();
-        
-        SaiBalakumar saibalakumar = new SaiBalakumar("Sai", "Balakumar", 3, 2);
-        addObject(saibalakumar, 3, 2);
-        saibalakumar.sitDown();
-        
-        AnishShivamurthy anishshivamurthy = new AnishShivamurthy("Anish", "Shivamurthy", 4, 3);
-        addObject(anishshivamurthy, 4, 3);
-        anishshivamurthy.sitDown();
-        
-        JuliaZhao juliazhao = new JuliaZhao("Julia", "Zhao", 1, 3);
-        addObject(juliazhao, 1, 3);
-        juliazhao.sitDown();
-        
-        KellieTai kellietai = new KellieTai("Kellie", "Tai", 1, 4);
-        addObject(kellietai, 1, 4);
-        kellietai.sitDown();
-        
-        AyushBandopadhyay ayushbandopadhyay = new AyushBandopadhyay("Ayush", "Bandopadhyay", 5, 3);
-        addObject(ayushbandopadhyay, 5, 3);
-        ayushbandopadhyay.sitDown();
-        
-        NiruSuravarjjala nirusuravarjjala = new NiruSuravarjjala("Niru", "Suravarjjala", 1, 5);
-        addObject(nirusuravarjjala, 1, 5);
-        nirusuravarjjala.sitDown(); */
-        
-
+        }
     }
 }
 
