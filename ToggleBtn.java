@@ -13,11 +13,11 @@ public class ToggleBtn extends Actor
      * Act - do whatever the ToggleBtn wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    public void act() // new act method
     {
-        if(Greenfoot.mouseClicked(this)){ 
-            currentPeriod = 1 - currentPeriod; 
-            ((Classroom)getWorld()).setPeriod(currentPeriod);
+        if(Greenfoot.mouseClicked(this)){ // if the Toggle Botton (red balloon) is clicked
+            currentPeriod = 1 - currentPeriod; // period 2 = 0 and period 3 = 1, so this allows the current period to change/toggle between periods 2 and 3 
+            ((Classroom)getWorld()).setPeriod(currentPeriod); // this sets the world so that the current period toggled shows up on the screen
         }
     }    
 }

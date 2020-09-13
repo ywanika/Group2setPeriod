@@ -22,9 +22,9 @@ public class Classroom extends World
     {
         // Create a new world with 10x6 cells with a cell size of 130x130 pixels.
         super(10, 6, 130);
-        ToggleBtn balloon = new ToggleBtn();
-        addObject(balloon, 1, 1);
-        setPeriod(0);
+        ToggleBtn balloon = new ToggleBtn(); // creates a new Toggle Botton
+        addObject(balloon, 1, 1); // adds the Toggle Button (red baloon) to location (1,1)
+        setPeriod(0); // sets period to default period which is period 1
     }
 
     /**
@@ -38,7 +38,7 @@ public class Classroom extends World
        ToggleBtn balloon = new ToggleBtn();
        addObject(balloon, 1, 1);
         
-       if (currentPeriod == 0){ //if the current priod, then create these students
+       if (currentPeriod == 0){ //if the current period is period 2, then create these students
            TrishaMoorkoth trishamoorkoth = new TrishaMoorkoth("Trisha", "Moorkoth", 6, 2);
            addObject(trishamoorkoth, 6, 2);
            trishamoorkoth.sitDown();
@@ -53,7 +53,7 @@ public class Classroom extends World
        }
        
 
-       else if (currentPeriod == 1) {  //period3
+       else if (currentPeriod == 1) {  //if the current period is period 3, then create these students
            JoshuaChon joshuachon = new JoshuaChon("Joshua", "Chon", 1, 6);
            addObject(joshuachon, 1, 6);
            joshuachon.sitDown();
