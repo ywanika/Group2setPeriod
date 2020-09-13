@@ -65,9 +65,9 @@ git commit -m “adding my files to the repository”
 
 INSTRUCTIONS:
 
-If you are in period 2, add your constructor to the setPeriod2 method in the setPeriod method in class. 
+If you are in period 2, add your constructor to the setPeriod2 method in the setPeriod method in Classroom. 
 
-If you are in period 3, add your constructor to the setPeriod3 method in the setPeriod method in class. 
+If you are in period 3, add your constructor to the setPeriod3 method in the setPeriod method in Classroom. 
 
 Make sure you are not in the same seat as another student in your period.
  
