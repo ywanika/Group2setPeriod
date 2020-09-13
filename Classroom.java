@@ -14,8 +14,6 @@ import java.lang.reflect.Constructor;
 public class Classroom extends World
 {
     private ArrayList<Class> listo = new ArrayList<Class>();
-    private List student2 = new ArrayList();
-    private List student3 = new ArrayList();
     /**
      * Constructor for objects of class Classroom.
      *
@@ -24,8 +22,9 @@ public class Classroom extends World
     {
         // Create a new world with 10x6 cells with a cell size of 130x130 pixels.
         super(10, 6, 130);
-
-        prepare();
+        ToggleBtn balloon = new ToggleBtn();
+        addObject(balloon, 1, 1);
+        prepare(0);
     }
 
     /**
@@ -33,7 +32,7 @@ public class Classroom extends World
      * objects and add them to the world.
      */
 
-     private void prepare()
+     public void prepare(int currentPeriod)
     {
         // Add three lines to this doc with your class constructor and your row and seat number
         // Make sure to match your first and last name to the class file you created.
@@ -55,15 +54,34 @@ public class Classroom extends World
         //     System.out.println("File not found");
         // }
 
-        int currentPeriod = 2;
+       removeObjects(getObjects(null));
+       
+       ToggleBtn balloon = new ToggleBtn();
+       addObject(balloon, 1, 1);
         
-        if (currentPeriod == 2){
-            //setBackground(RED);
-            
-        }
+       if (currentPeriod == 0){ //period2
+           JoeyHuang joeyhuang = new JoeyHuang("Joey", "Huang", 2, 1);
+           addObject(joeyhuang, 2, 1);
+           joeyhuang.sitDown(); 
+           
+           DerekXu derekxu = new DerekXu("Derek", "Xu", 2, 4);
+           addObject(derekxu, 2, 4);
+           derekxu.sitDown();
+       }
+       
+
+       if (currentPeriod == 1) {  //period3
+           JoshuaChon joshuachon = new JoshuaChon("Joshua", "Chon", 1, 6);
+           addObject(joshuachon, 1, 6);
+           joshuachon.sitDown();
+           
+           KaifJeelani kaifjeelani = new KaifJeelani("Kaif", "Jeelani", 5,2);
+           addObject(kaifjeelani, 5, 2);
+           kaifjeelani.sitDown();
+       }
         
 
-        JoshuaChon joshuachon = new JoshuaChon("Joshua", "Chon", 1, 6);
+        /*JoshuaChon joshuachon = new JoshuaChon("Joshua", "Chon", 1, 6);
         addObject(joshuachon, 1, 6);
         joshuachon.sitDown();
 
@@ -80,7 +98,7 @@ public class Classroom extends World
         kaifjeelani.sitDown();
 
          
-       /* EricZheng ericzheng = new EricZheng("Eric", "Zheng", 6, 1);
+        EricZheng ericzheng = new EricZheng("Eric", "Zheng", 6, 1);
         addObject(ericzheng, 6, 1);
         ericzheng.sitDown();
 
@@ -96,7 +114,7 @@ public class Classroom extends World
         addObject(akashdarbha, 3, 4);
         akashdarbha.sitDown();  
 
-       	SharvinM SharvinManjrekar = new SharvinM("Sharvin", "Manjrekar", 4, 4);
+        SharvinM SharvinManjrekar = new SharvinM("Sharvin", "Manjrekar", 4, 4);
         addObject(SharvinManjrekar, 4, 4);
         SharvinManjrekar.sitDown();
   
