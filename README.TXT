@@ -65,11 +65,11 @@ git commit -m “adding my files to the repository”
 
 INSTRUCTIONS:
 
-If you are in period 2, add your constructor to the setPeriod2 method in the setPeriod method in Classroom. 
+1. If you are in period 2, add your constructor to the if currentPeriod == 0 method in the setPeriod method in Classroom. 
 
-If you are in period 3, add your constructor to the setPeriod3 method in the setPeriod method in Classroom. 
+2. If you are in period 3, add your constructor to the if currentPeriod == 1 method in the setPeriod method in Classroom. 
 
-Make sure you are not in the same seat as another student in your period.
+3. Make sure you are not in the same seat as another student in your period.
  
-Use the Toggle Button (red balloon) to change the period from period 2 to period 3 
+4. Use the Toggle Button (red balloon) to change the period from period 2 to period 3 
 
